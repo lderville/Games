@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/home")
 public class homeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String Details = "/WEB-INF/jsp/Home.jsp";
+	private static final String Details = "index.jsp";
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
