@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="games">
+    <wb-module deploy-name="Games">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/dico"/>
-        <property name="context-root" value="games"/>
-        <property name="java-output-path" value="/games/build/classes"/>
+        <property name="java-output-path" value="/Games/build/classes"/>
+        <property name="context-root" value="Games"/>
     </wb-module>
 </project-modules>
