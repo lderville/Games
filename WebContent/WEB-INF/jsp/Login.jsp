@@ -15,13 +15,13 @@
 
 </head>
 
-<body class="text-center">
+<body class="text-center bg-dark">
 	<section class="container w-50 pt-5">
 		<div>
-			<a href="Home.jsp"><img class="mt-5 mb-4"
-				src="images/Logo_encheres.svg" alt="Logo enchères" /></a>
+			<a href="<c:url value = "/home"/>"><img class="mt-5 mb-4"
+				src="logo/logo.png" alt="Logo enchères" /></a>
 		</div>
-		<h1 class="h5 mb-3">Veuillez vous connecter</h1>
+		<h1 class="h5 mb-3 text-warning">Veuillez vous connecter</h1>
 	</section>
 
 	<section class="container w-50">
@@ -40,13 +40,13 @@
 
 				<div class="checkbox mb-1">
 					<label> <input type="checkbox" value="remember-me">
-						<small>Se souvenir de moi</small> <br> <a href="#"><small>Mot
+						<small class ="text-warning">Se souvenir de moi</small> <br> <a href="#"><small class="text-warning">Mot
 								de passe oublié</small></a>
 					</label>
 				</div>
 
 				<div>
-					<button type="submit" class="btn btn-sm btn-success w-100 mb-2">Connexion</button>
+					<button type="submit" class="btn btn-sm btn-warning w-100 mb-2">Connexion</button>
 				</div>
 			</form>
 		</div>
@@ -55,14 +55,13 @@
 	<section class="container w-50">
 		<div class="row justify-content-center">
 			<div class="w-100 col-5">
-				<a class="btn btn-sm btn-primary w-100 mb-1"
-					href="<c:url value = "/register"/>">Créer un compte</a> <br> <a
-					href="/WEB-INF/Home.jsp"><small>Retour à la page
+				
+					<a href="<c:url value = "/home"/>"><small class ="text-warning">Retour à la page
 						d'accueil</small></a>
 			</div>
 		</div>
 		<p class="mt-5 mb-3 text-muted">
-			<small>&copy; 2021 - Les objets sont nos amis</small>
+			<small>&copy; 2021 - Jeux en ligne</small>
 		</p>
 	</section>
 </body>
