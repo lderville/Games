@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+
 
 
 public class PenduManager {
@@ -61,6 +63,10 @@ random_word = ar.get(r.nextInt(ar.size()));
 		
 		return random_word ;
 	}
+	
+
+
+
 	
 	
 

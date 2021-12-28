@@ -21,13 +21,15 @@ import lionel.projet.games.bll.PenduManager;
 public class penduServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String pendu = "/WEB-INF/jsp/lependu.jsp";
+	private static final String win = "/WEB-INF/jsp/winPage.jsp";
+	private static final String loose = "/WEB-INF/jsp/loosePage.jsp";
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String mot_alea = null;
 		String mot_alea_vide= null;
 	
-			 mot_alea = PenduManager.getInstance().tirageAuHasard();
+			 mot_alea = PenduManager.getInstance().tirageAuHasard().toLowerCase();
 
 			
 		System.out.println(mot_alea);
@@ -36,7 +38,14 @@ public class penduServlet extends HttpServlet {
 		 char[] mychars_mot_vide = new char[myChars.length];
 		for (int i = 0; i < myChars.length; i++) {
 			
+			if (myChars[i] == ' ') {
+				mychars_mot_vide[i]=' ';	
+			}else if (myChars[i] == '-') {
+				mychars_mot_vide[i]='-';
+			}else{
+			
 				mychars_mot_vide[i]= '_';
+			}
 		}
 		 
 		 mot_alea_vide = String.valueOf(mychars_mot_vide);
@@ -54,10 +63,38 @@ public class penduServlet extends HttpServlet {
 		request.getSession().setAttribute("urlimage", "imagePendu/Le-Pendu-1.png");
 		request.getSession().setAttribute("tentative", 1);
 		 
+		
+		
+		request.getSession().setAttribute("a", "enable");
+		request.getSession().setAttribute("b", "enable");
+		request.getSession().setAttribute("c", "enable");
+		request.getSession().setAttribute("d", "enable");
+		request.getSession().setAttribute("e", "enable");
+		request.getSession().setAttribute("f", "enable");
+		request.getSession().setAttribute("g", "enable");
+		request.getSession().setAttribute("h", "enable");
+		request.getSession().setAttribute("i", "enable");
+		request.getSession().setAttribute("j", "enable");
+		request.getSession().setAttribute("k", "enable");
+		request.getSession().setAttribute("l", "enable");
+		request.getSession().setAttribute("m", "enable");
+		request.getSession().setAttribute("n", "enable");
+		request.getSession().setAttribute("o", "enable");
+		request.getSession().setAttribute("p", "enable");
+		request.getSession().setAttribute("q", "enable");
+		request.getSession().setAttribute("r", "enable");
+		request.getSession().setAttribute("s", "enable");
+		request.getSession().setAttribute("t", "enable");
+		request.getSession().setAttribute("u", "enable");
+		request.getSession().setAttribute("v", "enable");
+		request.getSession().setAttribute("w", "enable");
+		request.getSession().setAttribute("x", "enable");
+		request.getSession().setAttribute("y", "enable");
+		request.getSession().setAttribute("z", "enable");
+		
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(pendu);
 		dispatcher.forward(request, response);
-		
-		
 		
 		
 		
@@ -68,11 +105,14 @@ public class penduServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String para_lettre=request.getParameter("choixlettre");
-		
-		
-		
-		
+
 		char lettre_recu = para_lettre.charAt(0);
+		
+		request.getSession().setAttribute(para_lettre, "disabled");
+		
+		String salut = (String) request.getSession().getAttribute(para_lettre);
+		System.out.println(salut);
+		
 		System.out.println(lettre_recu);
 		String mot_alea_vide =(String) request.getSession().getAttribute("mot_a_trouver_vide");
 		System.out.println(mot_alea_vide);
@@ -130,7 +170,7 @@ public class penduServlet extends HttpServlet {
 
 		for (int i = 0; i < myChars.length; i++) {
 			System.out.println(mychars_mot_vide[i]);
-			if (myChars[i]== lettre_recu || (myChars[i]=='â' && lettre_recu =='a')||(myChars[i]=='é' && lettre_recu =='e')) {
+			if (myChars[i]== lettre_recu || (myChars[i]=='â' && lettre_recu =='a')||(myChars[i]=='é' && lettre_recu =='e')||(myChars[i]=='ï' && lettre_recu =='i')) {
 				mychars_mot_vide[i]= myChars[i];
 				
 			}else if (mychars_mot_vide[i]!='_') {
@@ -145,8 +185,26 @@ public class penduServlet extends HttpServlet {
 		request.getSession().setAttribute("mot_a_trouver_vide", mot_alea_vide); 
 		
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher(pendu);
-		dispatcher.forward(request, response);
+		if(mot_alea_vide.equals(mot_alea) && tentative<8) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher(win);
+			dispatcher.forward(request, response);
+			
+		}else if(tentative>=8) {
+		
+			RequestDispatcher dispatcher = request.getRequestDispatcher(loose);
+			dispatcher.forward(request, response);
+		
+		}else {
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher(pendu);
+			dispatcher.forward(request, response);
+			
+		}
 	}
 
+	
+		
+		
+		
+		
 }

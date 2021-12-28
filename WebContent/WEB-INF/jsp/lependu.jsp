@@ -44,110 +44,110 @@ li {
 <div class=" form-inline justify-content-center">  
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="a" />
-    <button class="btn btn-outline-warning" null>A</button>
+    <button class="btn btn-outline-warning" ${sessionScope.a}>A</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="b" />
-    <button class="btn btn-outline-warning">B</button>
+    <button class="btn btn-outline-warning" ${sessionScope.b}>B</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="c" />
-    <button class="btn btn-outline-warning">C</button>
+    <button class="btn btn-outline-warning" ${sessionScope.c}>C</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="d" />
-    <button class="btn btn-outline-warning">D</button>
+    <button class="btn btn-outline-warning" ${sessionScope.d}>D</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="e" />
-    <button class="btn btn-outline-warning">E</button>
+    <button class="btn btn-outline-warning" ${sessionScope.e}>E</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="f" />
-    <button class="btn btn-outline-warning">F</button>
+    <button class="btn btn-outline-warning" ${sessionScope.f}>F</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="g" />
-    <button class="btn btn-outline-warning">G</button>
+    <button class="btn btn-outline-warning" ${sessionScope.g}>G</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="h" />
-    <button class="btn btn-outline-warning">H</button>
+    <button class="btn btn-outline-warning" ${sessionScope.h}>H</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="i" />
-    <button class="btn btn-outline-warning">I</button>
+    <button class="btn btn-outline-warning" ${sessionScope.i}>I</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="j" />
-    <button class="btn btn-outline-warning">J</button>
+    <button class="btn btn-outline-warning" ${sessionScope.j}>J</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="k" />
-    <button class="btn btn-outline-warning">K</button>
+    <button class="btn btn-outline-warning" ${sessionScope.k}>K</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="l" />
-    <button class="btn btn-outline-warning">L</button>
+    <button class="btn btn-outline-warning" ${sessionScope.l}>L</button>
 </form>
 
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="m" />
-    <button class="btn btn-outline-warning">M</button>
+    <button class="btn btn-outline-warning" ${sessionScope.m}>M</button>
 </form>
 </div> 
 <div class=" form-inline justify-content-center"> 
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="n" />
-    <button class="btn btn-outline-warning">N</button>
+    <button class="btn btn-outline-warning" ${sessionScope.n}>N</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="o" />
-    <button class="btn btn-outline-warning">O</button>
+    <button class="btn btn-outline-warning" ${sessionScope.o}>O</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="p" />
-    <button class="btn btn-outline-warning">P</button>
+    <button class="btn btn-outline-warning" ${sessionScope.p}>P</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="q" />
-    <button class="btn btn-outline-warning">Q</button>
+    <button class="btn btn-outline-warning" ${sessionScope.q}>Q</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="r" />
-    <button class="btn btn-outline-warning">R</button>
+    <button class="btn btn-outline-warning" ${sessionScope.r}>R</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="s" />
-    <button class="btn btn-outline-warning">S</button>
+    <button class="btn btn-outline-warning" ${sessionScope.s}>S</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="t" />
-    <button class="btn btn-outline-warning">T</button>
+    <button class="btn btn-outline-warning" ${sessionScope.t}>T</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="u" />
-    <button class="btn btn-outline-warning">U</button>
+    <button class="btn btn-outline-warning" ${sessionScope.u}>U</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="v" />
-    <button class="btn btn-outline-warning">V</button>
+    <button class="btn btn-outline-warning" ${sessionScope.v}>V</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="w" />
-    <button class="btn btn-outline-warning">W</button>
+    <button class="btn btn-outline-warning" ${sessionScope.w}>W</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="x" />
-    <button class="btn btn-outline-warning">X</button>
+    <button class="btn btn-outline-warning" ${sessionScope.x}>X</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="y" />
-    <button class="btn btn-outline-warning">Y</button>
+    <button class="btn btn-outline-warning" ${sessionScope.y}>Y</button>
 </form>
 <form action="<c:url value ="/pendu"/>" method="post">
     <input type="hidden" name="choixlettre" value="z" />
-    <button class="btn btn-outline-warning">Z</button>
+    <button class="btn btn-outline-warning" ${sessionScope.z}>Z</button>
 </form>
 
 </div> 
