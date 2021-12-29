@@ -92,7 +92,7 @@ public class penduServlet extends HttpServlet {
 		request.getSession().setAttribute("y", "enable");
 		request.getSession().setAttribute("z", "enable");
 		
-		
+	
 		RequestDispatcher dispatcher = request.getRequestDispatcher(pendu);
 		dispatcher.forward(request, response);
 		
@@ -127,6 +127,7 @@ public class penduServlet extends HttpServlet {
 		for (char c : myChars) {
 		    if (c == lettre_recu) {
 		        contains = true;
+		        request.setAttribute("choix", "bravo Bonne lettre ");
 		        
 		        break;
 		    }
@@ -135,6 +136,7 @@ public class penduServlet extends HttpServlet {
 		    tentative = tentative+1;
 		    request.getSession().setAttribute("tentative", tentative);
 		    request.getSession().setAttribute("urlimage", "imagePendu/Le-Pendu-1.png");
+		    request.setAttribute("choix", "Perdu Mauvaise lettre ");
 		}
 		
 		
@@ -166,6 +168,7 @@ public class penduServlet extends HttpServlet {
 			
 			break;
 		}
+	
 		
 
 		for (int i = 0; i < myChars.length; i++) {

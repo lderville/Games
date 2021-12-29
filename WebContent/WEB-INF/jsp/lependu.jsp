@@ -39,7 +39,7 @@ li {
 <br><br>
 
 <h2 class="text-center text-warning">Cliquer sur la lettre de votre choix</h2>
-<br><br>
+<br><h3 class="text-center text-warning">${requestScope.choix}</h3><br>
 
 <div class=" form-inline justify-content-center">  
 <form action="<c:url value ="/pendu"/>" method="post">
