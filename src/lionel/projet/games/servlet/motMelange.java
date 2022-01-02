@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import lionel.projet.games.bll.PenduManager;
+import lionel.projet.games.bll.Dictionnaire;
+
 
 
 @WebServlet("/motMelange")
@@ -20,7 +21,7 @@ public class motMelange extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		List<String> list_de_mot=PenduManager.getInstance().melangeMot();
+		List<String> list_de_mot=Dictionnaire.getInstance().melangeMot();
 		
 		String mot = list_de_mot.get(0);
 		String mot_mel = list_de_mot.get(1);

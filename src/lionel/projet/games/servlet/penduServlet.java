@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.jasper.tagplugins.jstl.core.ForEach;
 
-import lionel.projet.games.bll.PenduManager;
+import lionel.projet.games.bll.Dictionnaire;
+
 
 /**
  * Servlet implementation class penduServlet
@@ -29,7 +30,7 @@ public class penduServlet extends HttpServlet {
 		String mot_alea = null;
 		String mot_alea_vide= null;
 	
-			 mot_alea = PenduManager.getInstance().tirageAuHasard().toLowerCase();
+			 mot_alea = Dictionnaire.getInstance().tirageAuHasard().toLowerCase();
 
 			
 		System.out.println(mot_alea);

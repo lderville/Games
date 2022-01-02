@@ -14,13 +14,13 @@ import java.util.Scanner;
 
 import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 
-public class PenduManager {
+public class Dictionnaire {
 
-	private static PenduManager instance;
+	private static Dictionnaire instance;
 
-	public static PenduManager getInstance() {
+	public static Dictionnaire getInstance() {
 		if (instance == null) {
-			instance = new PenduManager();
+			instance = new Dictionnaire();
 		}
 		return instance;
 	}
