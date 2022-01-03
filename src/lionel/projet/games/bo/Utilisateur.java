@@ -4,15 +4,15 @@ public class Utilisateur {
 	
 	private int no_utilisateur;
 	private String pseudo;
-	private String surname;
-	private String name;
-	private String mail;
-	private String phone;
-	private String street;
-	private String postalCode;
-	private String city;
+	private String prenom;
+	private String nom;
+	private String email;
+	private String telephone;
+	private String rue;
+	private String codePostal;
+	private String ville;
 	private String password;
-	private int credit;
+	private int jeton;
 	private boolean administrateur;
 	
 	
@@ -28,47 +28,47 @@ public class Utilisateur {
 	public void setPseudo(String pseudo) {
 		this.pseudo = pseudo;
 	}
-	public String getSurname() {
-		return surname;
+	public String getPrenom() {
+		return prenom;
 	}
-	public void setSurname(String surname) {
-		this.surname = surname;
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
 	}
-	public String getName() {
-		return name;
+	public String getNom() {
+		return nom;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
-	public String getMail() {
-		return mail;
+	public String getEmail() {
+		return email;
 	}
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public String getPhone() {
-		return phone;
+	public String getTelephone() {
+		return telephone;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
 	}
-	public String getStreet() {
-		return street;
+	public String getRue() {
+		return rue;
 	}
-	public void setStreet(String street) {
-		this.street = street;
+	public void setRue(String rue) {
+		this.rue = rue;
 	}
-	public String getPostalCode() {
-		return postalCode;
+	public String getCodePostal() {
+		return codePostal;
 	}
-	public void setPostalCode(String postalCode) {
-		this.postalCode = postalCode;
+	public void setCodePostal(String codePostal) {
+		this.codePostal = codePostal;
 	}
-	public String getCity() {
-		return city;
+	public String getVille() {
+		return ville;
 	}
-	public void setCity(String city) {
-		this.city = city;
+	public void setVille(String ville) {
+		this.ville = ville;
 	}
 	public String getPassword() {
 		return password;
@@ -76,11 +76,11 @@ public class Utilisateur {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public int getCredit() {
-		return credit;
+	public int getJeton() {
+		return jeton;
 	}
-	public void setCredit(int credit) {
-		this.credit = credit;
+	public void setJeton(int jeton) {
+		this.jeton = jeton;
 	}
 	public boolean isAdministrateur() {
 		return administrateur;
@@ -88,24 +88,28 @@ public class Utilisateur {
 	public void setAdministrateur(boolean administrateur) {
 		this.administrateur = administrateur;
 	}
-	
-	
-	public Utilisateur(int no_utilisateur, String pseudo, String surname, String name, String mail, String phone,
-			String street, String postalCode, String city, String password, int credit, boolean administrateur) {
-	
+	public Utilisateur(int no_utilisateur, String pseudo, String prenom, String nom, String email, String telephone,
+			String rue, String codePostal, String ville, String password, int jeton, boolean administrateur) {
+		this(pseudo, prenom, nom, email, telephone, rue, codePostal, ville, password, jeton, administrateur);
 		this.no_utilisateur = no_utilisateur;
+		
+		
+	}
+	public Utilisateur(String pseudo, String prenom, String nom, String email, String telephone, String rue,
+			String codePostal, String ville, String password, int jeton, boolean administrateur) {
 		this.pseudo = pseudo;
-		this.surname = surname;
-		this.name = name;
-		this.mail = mail;
-		this.phone = phone;
-		this.street = street;
-		this.postalCode = postalCode;
-		this.city = city;
+		this.prenom = prenom;
+		this.nom = nom;
+		this.email = email;
+		this.telephone = telephone;
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
 		this.password = password;
-		this.credit = credit;
+		this.jeton = jeton;
 		this.administrateur = administrateur;
 	}
+	
 	
 	
 	

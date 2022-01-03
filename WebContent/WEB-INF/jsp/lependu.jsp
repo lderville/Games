@@ -149,7 +149,7 @@ li {
     <input type="hidden" name="choixlettre" value="z" />
     <button class="btn btn-outline-warning" ${sessionScope.z}>Z</button>
 </form>
-
+<br><br>
 </div> 
 </div>
 </body>

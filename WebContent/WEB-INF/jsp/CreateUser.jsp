@@ -27,9 +27,9 @@
 
 </head>
 
-<body>
+<body class="bg-dark">
 
-	<%@include file="/header/header.jspf"%>
+
 
 	<ejs-autocomplete #ddlChallanType #purchaseType floatLabelType="Always"
 		[fields]="localFields" [ngClass]="{ 'asterix' : enableAsterix }"
@@ -40,8 +40,8 @@
 	<section class="container">
 		<div class="row" style="text-align: center">
 			<div class="col">
-				<a href="Home.jsp"><img class="mt-5 mb-4"
-					src="images/Logo_encheres.svg" alt="Logo_encheres" /></a>
+				<a href="<c:url value = "/home"/>"><img class="mt-5 mb-4"
+					src="logo/logo.png" alt="Logo_encheres" /></a>
 			</div>
 		</div>
 	</section>
@@ -50,9 +50,9 @@
 		<div class="row text-center">
 			<div class="col-md-2 col-lg-2 col-xl-4 col-4"></div>
 			<div class="col-auto mb-0">
-				<h1 class="h6">Inscrivez-vous pour profiter des enchères !</h1>
+				<h1 class="text-warning h6">Inscrivez-vous pour profiter des nouveaux jeux !</h1>
 				<p>
-					<small>Les champs marqués d'une <font class="ast">*</font>
+					<small class ="text-warning">Les champs marqués d'une <font class="ast">*</font>
 						sont obligatoires
 					</small>
 				</p>
@@ -65,35 +65,35 @@
 		<div class="row">
 			<div class="col-4"></div>
 			<div class="col-xs-10 col-sm-8 col-md-8">
-				<form action="<c:url value="/register"/>" method="post">
+				<form action="<c:url value="CreateUser"/>" method="post">
 					<div class="col-6 mb-0">
 						<input placeholder="Pseudo*" style="resize: none"
 							class="form-control form-control-sm mb-2" type="text"
 							name="pseudo" required> <input placeholder="Prénom*"
-							class="form-control form-control-sm" type="text" name="name"
+							class="form-control form-control-sm" type="text" name="prenom"
 							required> <input placeholder="Nom*"
 							class="form-control form-control-sm mb-2" type="text"
-							name="surname" required> <input placeholder="Email*"
+							name="nom" required> <input placeholder="Email*"
 							class="form-control form-control-sm" type="text" name="mail"
 							required> <input placeholder="Téléphone*"
 							class="form-control form-control-sm" type="text" name="phone"
 							maxlength=10 required>
 						<p class="mt-0 mb-1">
-							<small><em>Format 0600000000</em></small>
+							<small class ="text-warning"><em>Format 0600000000</em></small>
 						</p>
 						<input placeholder="Rue*" class="form-control form-control-sm"
-							type="text" name="street" required> <input
+							type="text" name="rue" required> <input
 							placeholder="Code Postal*" class="form-control form-control-sm"
 							type="text" name="cp" maxlength=5 required> <input
 							placeholder="Ville*" class="form-control form-control-sm mb-2"
-							type="text" name="city" required> <input
+							type="text" name="ville" required> <input
 							placeholder="Mot De Passe*" class="form-control form-control-sm"
 							type="password" name="password" required> <input
 							placeholder="Confirmer le mot de passe*"
 							class="form-control form-control-sm" type="password"
 							name="PasswordConf" required>
 						<p class="mb-2">
-							<small>Le mot de passe doit :<br> - Comporter entre
+							<small class ="text-warning">Le mot de passe doit :<br> - Comporter entre
 								5 et 25 caractères<br> - Contenir une miniscule et une
 								majuscule<br> - Contenir au moins un chiffre
 							</small>
@@ -114,7 +114,7 @@
 			<div class="col col-4">
 				<div
 					class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-8 mb-0">
-					<a href="<c:url value="/web-inf/jsp/home" />"><button
+					<a href="<c:url value="home" />"><button
 							class="btn btn-sm btn-danger w-100">Annuler</button></a>
 				</div>
 			</div>

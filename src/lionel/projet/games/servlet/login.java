@@ -20,12 +20,19 @@ public class login extends HttpServlet {
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(Login);
 		dispatcher.forward(request, response);
+		
+		
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		doGet(request, response);
+		
+		String identifiant = request.getParameter("userID");
+		String password = request.getParameter("password");
+		
+		
+		
 	}
 
 }
