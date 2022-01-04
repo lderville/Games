@@ -1,0 +1,5 @@
+﻿{
+  "deploy": {
+    "jarName": "path/to/jar"
+  }
+}
