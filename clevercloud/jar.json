@@ -1,5 +1,5 @@
 ﻿{
   "deploy": {
-    "jarName": "Games/WebContent/WEB-INF/lib/jstl-1.2.jar"
+    "jarName": "Games/WebContent/WEB-INF/lib/Games.jar"
   }
 }
