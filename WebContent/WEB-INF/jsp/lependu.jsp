@@ -26,7 +26,8 @@ li {
 
 <h1 class="text-center text-warning">LE PENDU</h1>
 <br>
-<div class="text-center">
+<div class="text-center d-flex justify-content-center">
+<img class ="rounded mx-1" src="logo/potence.png">
 <img class ="rounded" src="${sessionScope.urlimage}">
 </div>
 <h2 class="text-center text-warning">Le mot à trouver</h2>

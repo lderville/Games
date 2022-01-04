@@ -4,16 +4,22 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import lionel.projet.games.bo.Utilisateur;
+import lionel.projet.games.dal.DALException;
 import lionel.projet.games.dal.UtilisateurDAO;
 
 
 public class Utilisateurjdbcimpl implements UtilisateurDAO {
 	
 	private static final String SQL_INSERT_USER = "INSERT INTO UTILISATEURS VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )";	
+	private final static String SQL_SELECT_USER_BY_PSEUDO_AND_EMAIL = "SELECT * from UTILISATEURS where pseudo = ? OR email = ? ";
+	private final static String SQL_SELECT_USER_BY_PSEUDO = "SELECT * from UTILISATEURS where pseudo = ?";
+	private final static String SQL_SELECT_USER_BY_EMAIL = "SELECT * from UTILISATEURS where pseudo = ?";
 	
-	public Utilisateur insertUser(Utilisateur nouveauUser) {
+	public Utilisateur insertUser(Utilisateur nouveauUser) throws DALException {
 
 		// Obtenir une connexion
 		Connection cnx = ConnectionProvider.getConnection();
@@ -80,6 +86,43 @@ public class Utilisateurjdbcimpl implements UtilisateurDAO {
 
 		return nouveauUser;
 
+	}
+	
+	public List<Utilisateur> selectBypseudoAndMail(String login) throws DALException  {
+		List<Utilisateur> utilisateurs = new ArrayList<Utilisateur>();
+		
+		try(Connection cnx = ConnectionProvider.getConnection();) {
+			
+			PreparedStatement ordre = cnx.prepareStatement(SQL_SELECT_USER_BY_PSEUDO_AND_EMAIL);
+			ordre.setString(1, login);
+			ordre.setString(2, login);
+			
+			
+			ResultSet rs = ordre.executeQuery();
+			while(rs.next()) {
+				
+				int no_utilisateur = rs.getInt("no_utilisateur");
+				String pseudo = rs.getString("pseudo");
+				String nom = rs.getString("nom");
+				String prenom = rs.getString("prenom");
+				String email = rs.getString("email");
+				String telephone = rs.getString("telephone");
+				String rue = rs.getString("rue");
+				String code_postal = rs.getString("code_postal");
+				String ville = rs.getString("ville");
+				String mot_de_passe = rs.getString("mot_de_passe");
+				int  jeton =  rs.getInt("jeton");
+				Utilisateur u = new Utilisateur(no_utilisateur, pseudo, prenom, nom, email, telephone, rue, code_postal, ville, mot_de_passe, jeton, false);
+
+						utilisateurs.add(u);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new DALException(e.getMessage());
+		}
+		
+		return utilisateurs;
 	}
 	
 	

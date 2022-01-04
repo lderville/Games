@@ -5,6 +5,9 @@ package lionel.projet.games.bll;
 
 
 
+import java.util.List;
+
+
 import lionel.projet.games.bo.Utilisateur;
 import lionel.projet.games.dal.DALException;
 import lionel.projet.games.dal.DAOFactory;
@@ -55,6 +58,28 @@ private static UtilisateurManager instance;
 		}
 		
 	}
+	
+	public List<Utilisateur> SeLoguer(String user_Pseudo_mail) throws BLLException {
+		BLLException ex = new BLLException();
+		
+		validationPseudo(user_Pseudo_mail, ex);
+		
+		if(ex.hasErreur()) {
+			throw ex;
+		}
+		
+		try {
+			return dao.selectBypseudoAndMail(user_Pseudo_mail);
+		} catch (DALException e) {
+			e.printStackTrace();
+			ex.ajouterErreur(e);
+			throw ex;
+		}
+		
+	}
+	
+	
+	
 
 	private void validationCode_postal(String code_postal, BLLException ex) {
 		if(code_postal == null || code_postal.isEmpty()|| code_postal.length() > 10) {

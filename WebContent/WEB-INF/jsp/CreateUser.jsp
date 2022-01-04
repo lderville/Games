@@ -50,12 +50,14 @@
 		<div class="row text-center">
 			<div class="col-md-2 col-lg-2 col-xl-4 col-4"></div>
 			<div class="col-auto mb-0">
-				<h1 class="text-warning h6">Inscrivez-vous pour profiter des nouveaux jeux !</h1>
+				<h1 class="text-warning h6">Inscrivez-vous pour profiter des
+					nouveaux jeux !</h1>
 				<p>
-					<small class ="text-warning">Les champs marqués d'une <font class="ast">*</font>
-						sont obligatoires
+					<small class="text-warning">Les champs marqués d'une <font
+						class="ast">*</font> sont obligatoires
 					</small>
 				</p>
+				<h3 class="text-danger" >${requestScope.wrong}</h3>
 			</div>
 			<div class="col-md-2 col-lg-2 col-xl-4 col-4"></div>
 		</div>
@@ -67,35 +69,24 @@
 			<div class="col-xs-10 col-sm-8 col-md-8">
 				<form action="<c:url value="CreateUser"/>" method="post">
 					<div class="col-6 mb-0">
-						<input placeholder="Pseudo*" style="resize: none"
-							class="form-control form-control-sm mb-2" type="text"
-							name="pseudo" required> <input placeholder="Prénom*"
-							class="form-control form-control-sm" type="text" name="prenom"
-							required> <input placeholder="Nom*"
-							class="form-control form-control-sm mb-2" type="text"
-							name="nom" required> <input placeholder="Email*"
-							class="form-control form-control-sm" type="text" name="mail"
-							required> <input placeholder="Téléphone*"
-							class="form-control form-control-sm" type="text" name="phone"
-							maxlength=10 required>
+							<input value="${requestScope.inscription.pseudo}" style="resize: none" class="form-control form-control-sm mb-2" type="text" name="pseudo" required>
+							<input value="${requestScope.inscription.prenom}" class="form-control form-control-sm" type="text" name="prenom" required>
+							<input value="${requestScope.inscription.nom}" class="form-control form-control-sm mb-2" type="text" name="nom" required>
+							<input value="${requestScope.inscription.email}" class="form-control form-control-sm" type="text" name="mail" required>
+							<input value="${requestScope.inscription.telephone}" class="form-control form-control-sm" type="text" name="phone" maxlength=10 required>
 						<p class="mt-0 mb-1">
-							<small class ="text-warning"><em>Format 0600000000</em></small>
+							<small class="text-warning"><em>Format 0600000000</em></small>
 						</p>
-						<input placeholder="Rue*" class="form-control form-control-sm"
-							type="text" name="rue" required> <input
-							placeholder="Code Postal*" class="form-control form-control-sm"
-							type="text" name="cp" maxlength=5 required> <input
-							placeholder="Ville*" class="form-control form-control-sm mb-2"
-							type="text" name="ville" required> <input
-							placeholder="Mot De Passe*" class="form-control form-control-sm"
-							type="password" name="password" required> <input
-							placeholder="Confirmer le mot de passe*"
-							class="form-control form-control-sm" type="password"
-							name="PasswordConf" required>
-						<p class="mb-2">
-							<small class ="text-warning">Le mot de passe doit :<br> - Comporter entre
-								5 et 25 caractères<br> - Contenir une miniscule et une
-								majuscule<br> - Contenir au moins un chiffre
+							<input value="${requestScope.inscription.rue}" class="form-control form-control-sm" type="text" name="rue" required>
+							<input value="${requestScope.inscription.codePostal}" class="form-control form-control-sm" type="text" name="cp" maxlength=5 required> 
+							<input value="${requestScope.inscription.ville}" class="form-control form-control-sm mb-2" type="text" name="ville" required> 
+							<input placeholder="mot de passe*" class="form-control form-control-sm" type="password" name="password" required>
+							<input placeholder="Confirmer le mot de passe*" class="form-control form-control-sm" type="password" name="PasswordConf" required>
+							 <p class="mb-2">
+							<small class="text-warning">Le mot de passe doit :<br>
+								- Comporter entre 5 et 25 caractères<br> - Contenir une
+								miniscule et une majuscule<br> - Contenir au moins un
+								chiffre
 							</small>
 						</p>
 						<button

@@ -22,6 +22,9 @@
 				src="logo/logo.png" alt="Logo enchères" /></a>
 		</div>
 		<h1 class="h5 mb-3 text-warning">Veuillez vous connecter</h1>
+		<h3 class="h5 mb-3 text-danger Normal weight text.">${requestScope.wrongpassword}</h3>
+		
+		
 	</section>
 
 	<section class="container w-50">

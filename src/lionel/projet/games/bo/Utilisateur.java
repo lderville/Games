@@ -109,6 +109,36 @@ public class Utilisateur {
 		this.jeton = jeton;
 		this.administrateur = administrateur;
 	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Utilisateur [no_utilisateur=");
+		builder.append(no_utilisateur);
+		builder.append(", pseudo=");
+		builder.append(pseudo);
+		builder.append(", prenom=");
+		builder.append(prenom);
+		builder.append(", nom=");
+		builder.append(nom);
+		builder.append(", email=");
+		builder.append(email);
+		builder.append(", telephone=");
+		builder.append(telephone);
+		builder.append(", rue=");
+		builder.append(rue);
+		builder.append(", codePostal=");
+		builder.append(codePostal);
+		builder.append(", ville=");
+		builder.append(ville);
+		builder.append(", password=");
+		builder.append(password);
+		builder.append(", jeton=");
+		builder.append(jeton);
+		builder.append(", administrateur=");
+		builder.append(administrateur);
+		builder.append("]");
+		return builder.toString();
+	}
 	
 	
 	
