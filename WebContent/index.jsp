@@ -26,7 +26,7 @@ li {
 	<br>
 	<br>
 	<div class = "d-flex">
-		<div class="card bg-dark mx-4" style="width: 18rem;">
+		<div class="card bg-dark mx-4 border border-warning" style="width: 18rem;">
 			<img class="card-img-top" src="logo/potence.png" alt="Card image cap">
 			<div class="card-body">
 				<h5 class="card-title text-warning">Jeu Du Pendu</h5>
@@ -35,7 +35,7 @@ li {
 				<a href="<c:url value = "pendu"/>" class="btn btn-outline-warning">Jouer</a>
 			</div>
 		</div>
-		<div class="card bg-dark mx-1" style="width: 18rem;">
+		<div class="card bg-dark mx-1 border border-warning" style="width: 18rem;">
 			<img class="card-img-top" src="logo/mots-melanges.png" alt="Card image cap">
 			<div class="card-body">
 			<br>

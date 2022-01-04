@@ -23,7 +23,7 @@ li {
 
 	<%@include file="/header/header.jspf"%>
 
-<br><br><br>
+
 <h1 class="text-center text-warning">LE PENDU</h1>
 <br>
 <div class="text-center">
@@ -36,7 +36,7 @@ li {
     <h1 class ="text-warning d-inline mx-1"><c:out value="${sessionScope.mot_a_trouver_vide.charAt(i)}"/></h1>
 </c:forEach>
 <br><br>
-<br><br>
+
 
 <h2 class="text-center text-warning">Cliquer sur la lettre de votre choix</h2>
 <br><h3 class="text-center text-warning">${requestScope.choix}</h3><br>
