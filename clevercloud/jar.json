@@ -1,5 +1,5 @@
 ﻿{
   "deploy": {
-    "jarName": "Games/WebContent/WEB-INF/lib"
+    "jarName": "path/to/jar"
   }
 }
