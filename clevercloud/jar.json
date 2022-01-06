@@ -1,5 +1,5 @@
 {
   "deploy": {
-    "jarName": "WebContent/WEB-INF/lib/WebContent/servlet-api.jar"
+    "jarName": "WebContent/WEB-INF/lib/servlet-api.jar"
   }
 }
