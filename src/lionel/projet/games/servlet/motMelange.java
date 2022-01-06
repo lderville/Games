@@ -18,6 +18,8 @@ import lionel.projet.games.bll.Dictionnaire;
 public class motMelange extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String mot_melange = "/WEB-INF/jsp/motMelange.jsp";
+	private static final String WIN = "/WEB-INF/jsp/winPage.jsp";
+	private static final String LOOSE = "/WEB-INF/jsp/loosePage.jsp";
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
@@ -34,6 +36,7 @@ public class motMelange extends HttpServlet {
 		request.getSession().setAttribute("mot", mot);
 		request.getSession().setAttribute("mot_mel", mot_mel);
 		request.getSession().setAttribute("nombre_lettre", arrayChar.length-1);
+		request.getSession().setAttribute("tentative", 6);
 		
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(mot_melange);
@@ -43,7 +46,36 @@ public class motMelange extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String proposition = request.getParameter("proposition");
+		String mot = (String) request.getSession().getAttribute("mot") ;
+		int tentative = (int) request.getSession().getAttribute("tentative");
 		
+		
+		if (proposition.equals(mot)) {
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher(WIN);
+			dispatcher.forward(request, response);
+			
+		} else {
+			
+			if (tentative>0) {
+				
+				tentative -=1;
+				request.getSession().setAttribute("tentative", tentative);
+				
+				RequestDispatcher dispatcher = request.getRequestDispatcher(mot_melange);
+				dispatcher.forward(request, response);
+				
+			} else {
+				
+				RequestDispatcher dispatcher = request.getRequestDispatcher(LOOSE);
+				dispatcher.forward(request, response);
+
+			}
+			
+			
+
+		}
 		
 		
 	}

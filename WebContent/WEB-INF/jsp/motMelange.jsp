@@ -13,6 +13,11 @@
 li {
 	list-style: none;
 }
+
+input[type="text"]
+{
+    font-size:24px;
+}
 </style>
 
 <meta charset="UTF-8">
@@ -31,7 +36,17 @@ li {
 			<c:out value="${sessionScope.mot_mel.charAt(i)}" />
 		</h1>
 	</c:forEach>
-
+	<br><br>
+	<h4 class = "text-warning">Taper votre proposition</h4>
+	
+	<form action="<c:url value ="/motMelange"/>" method="post">
+	<div class="text-center row d-flex justify-content-center">
+	<input value="" class="display-4 form-control w-25 bg-dark text-warning" type="text" name="proposition" maxlength=100 required>
+	</div>
+	<br>
+	<button class="btn btn-outline-warning" >ENVOYER</button>
+	</form>
+	
 </div>
 </body>
 </html>
