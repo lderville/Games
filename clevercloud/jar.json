@@ -1,5 +1,6 @@
 {
-  "deploy": {
-    "jarName": "WebContent/WEB-INF/lib/servlet-api.jar"
+  "build": {
+    "type": "maven",
+    "goal": "package"
   }
 }
