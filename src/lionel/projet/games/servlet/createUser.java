@@ -66,6 +66,7 @@ public class createUser extends HttpServlet {
 		
 		
 		Utilisateur newUser = new Utilisateur(pseudo, prenom, nom, email, telephone, rue, code_postal, ville, password, jeton, administrateur);
+		System.out.println(newUser.toString());
 		List<Utilisateur> list_user2 = null;
 		List<Utilisateur> list_user = null;
 		try {

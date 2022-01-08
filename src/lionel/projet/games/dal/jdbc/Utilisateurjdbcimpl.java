@@ -14,7 +14,7 @@ import lionel.projet.games.dal.UtilisateurDAO;
 
 public class Utilisateurjdbcimpl implements UtilisateurDAO {
 	
-	private static final String SQL_INSERT_USER = "INSERT INTO UTILISATEURS VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )";	
+	private static final String SQL_INSERT_USER = "INSERT INTO UTILISATEURS ( pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mot_de_passe, jeton, administrateur) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )";	
 	private final static String SQL_SELECT_USER_BY_PSEUDO_AND_EMAIL = "SELECT * from UTILISATEURS where pseudo = ? OR email = ? ";
 	private final static String SQL_SELECT_USER_BY_PSEUDO = "SELECT * from UTILISATEURS where pseudo = ?";
 	private final static String SQL_SELECT_USER_BY_EMAIL = "SELECT * from UTILISATEURS where pseudo = ?";
