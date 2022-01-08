@@ -1,6 +1,17 @@
 {
-  "build": {
-    "type": "maven",
-    "goal": "package"
-  }
+   "build": {
+      "type": "maven",
+      "goal": "package"
+   },
+   "deploy": {
+      "container": "TOMCAT8",
+      "war": [
+         {
+            "file": "target/Games-0.0.1-SNAPSHOT.war",
+            "context": "/app1",
+            "checkMe": "/app1/ping"
+         }
+
+      ]
+   }
 }
