@@ -9,7 +9,7 @@
          {
             "file": "target/Games-0.0.1-SNAPSHOT.war",
             "context": "/Games",
-            "checkMe": "/Games/ping"
+            "checkMe": "/Games/home"
          }
 
       ]
