@@ -1,18 +1,14 @@
 package lionel.projet.games.bll;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 
 public class Dictionnaire {
 
