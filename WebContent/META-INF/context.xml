@@ -7,9 +7,9 @@
 		driverClassName="com.mysql.jdbc.Driver"
 		type="javax.sql.DataSource"
 
-		url="jdbc:mysql://127.0.0.1:3306/games?characterEncoding=utf8"
+		url="jdbc:mysql://btkyw8grbkwjciyozhhv-mysql.services.clever-cloud.com:3306/btkyw8grbkwjciyozhhv?characterEncoding=utf8"
 		
-		username="sa" password="Pa$$w0rd" initialSize="5" maxTotal="25"
+		username="u7zane3dwi5wkmcd" password="hxyrKGQR5qSrP7gu8hVu" initialSize="5" maxTotal="25"
 		minIdle="5" maxIdle="8" maxWaitMillis="5000" />
 
 
