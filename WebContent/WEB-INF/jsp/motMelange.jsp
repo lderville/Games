@@ -37,6 +37,7 @@ input[type="text"]
 		</h1>
 	</c:forEach>
 	<br><br>
+	<h4 class="text-danger">Il vous reste ${sessionScope.tentative } tentative(s)</h4>
 	<h4 class = "text-warning">Taper votre proposition</h4>
 	
 	<form action="<c:url value ="/motMelange"/>" method="post">
