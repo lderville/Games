@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://kit.fontawesome.com/7d15da244a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body class="bg-dark">
+<br><br>
+<div class="d-flex justify-content-center">
+    <div class="input-group w-50 mb-3">
+        <div class="input-group-prepend">
+            <span class="border-warning input-group-text text-warning bg-secondary" >taper le nom ou l'id pokemon et appuyer sur ENTRER</span>
+        </div>
+        <input placeholder="pokemon ou ID" type="text" class=" text-warning form-control border-warning bg-dark" id="pokemon" >
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+<div class="card bg-dark mx-1 border border-warning" style="width: 18rem;">
+    <img class="card-img-top" id="imageprecedent" src="logo/pokeball.jpg" alt="Card image cap">
+    <div class="card-body">
+        <div id="#informationsprecedent" >
+            <p class="text-warning" id="nomprecedent"></p>
+            <p class="text-warning" id="idpokprecedent"></p>
+            <ul class="text-warning" id="typesprecedent">
+            </ul>
+            <p class="text-warning" id="poidsprecedent"></p>
+        </div>
+        <button id="btnprecedent" class="btn btn-outline-warning" onclick="precedent()">PRECEDENT</button>
+    </div>
+</div>
+<div class="card bg-dark mx-1 border border-warning" style="width: 18rem;">
+    <img class="card-img-top" id="image" src="logo/pokeball.jpg" alt="Card image cap">
+    <div class="card-body">
+
+        <div id="#informations" >
+            <p class="text-warning" id="nom"></p>
+            <p class="text-warning" id="idpok"></p>
+            <ul class="text-warning" id="types">
+            </ul>
+            <p class="text-warning" id="poids"></p>
+        </div>
+
+    </div>
+</div>
+<div class="card bg-dark mx-1 border border-warning" style="width: 18rem;">
+    <img class="card-img-top" id="imagesuivant" src="logo/pokeball.jpg" alt="Card image cap">
+    <div class="card-body">
+        <div id="#informationssuivant" >
+            <p class="text-warning" id="nomsuivant"></p>
+            <p class="text-warning" id="idpoksuivant"></p>
+            <ul class="text-warning" id="typessuivant">
+            </ul>
+            <p class="text-warning" id="poidssuivant"></p>
+        </div>
+
+
+
+        <button  class="btn btn-outline-warning " onclick="suivant()">SUIVANT</button>
+    </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script_pokedex.js"></script>
+</body>
+</html>
