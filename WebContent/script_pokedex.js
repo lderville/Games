@@ -41,21 +41,21 @@ $("#pokemon").keypress(function(event) {
         ajouter(pokemon,$('#nom'),$('#image'),$('#idpok'),$('#types'),$('#poids') )
         setTimeout(() => { ajouter(idpokemon+1,$('#nomsuivant'),$('#imagesuivant'),$('#idpoksuivant'),$('#typessuivant'),$('#poidssuivant') ); }, 200);
         setTimeout(() => { ajouter(idpokemon-1,$('#nomprecedent'),$('#imageprecedent'),$('#idpokprecedent'),$('#typesprecedent'),$('#poidsprecedent') ); }, 200);
-
+        idpokemon++;
     }
 });
 function precedent(){
-    console.log("salut");
 
+idpokemon--;
     setTimeout(() => { ajouter(idpokemon,$('#nom'),$('#image'),$('#idpok'),$('#types'),$('#poids') ); }, 1000);
     setTimeout(() => { ajouter(idpokemon+1,$('#nomsuivant'),$('#imagesuivant'),$('#idpoksuivant'),$('#typessuivant'),$('#poidssuivant') ); }, 1000);
     setTimeout(() => { ajouter(idpokemon-1,$('#nomprecedent'),$('#imageprecedent'),$('#idpokprecedent'),$('#typesprecedent'),$('#poidsprecedent') ); }, 1000);
 
 }
 function suivant(){
-    console.log("salut");
 
-    setTimeout(() => { ajouter(idpokemon+2,$('#nom'),$('#image'),$('#idpok'),$('#types'),$('#poids') ); }, 1000);
+idpokemon++;
+    setTimeout(() => { ajouter(idpokemon,$('#nom'),$('#image'),$('#idpok'),$('#types'),$('#poids') ); }, 1000);
     setTimeout(() => { ajouter(idpokemon+1,$('#nomsuivant'),$('#imagesuivant'),$('#idpoksuivant'),$('#typessuivant'),$('#poidssuivant') ); }, 1000);
     setTimeout(() => { ajouter(idpokemon-1,$('#nomprecedent'),$('#imageprecedent'),$('#idpokprecedent'),$('#typesprecedent'),$('#poidsprecedent') ); }, 1000);
 
